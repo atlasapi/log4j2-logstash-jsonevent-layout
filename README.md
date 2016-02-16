@@ -5,6 +5,13 @@ Log4J2 Layout as a Logstash "json_event"
 
 Note: Currently alpha: under active development and review. Input and contributions most welcome!
 
+This is a MetaBroadcast fork of a fork.  The key differences with the original github project:
+
+    https://github.com/majikthys/log4j2-logstash-jsonevent-layout
+
+* brings in compile errors fixes (by https://github.com/finn-no/log4j2-logstash-jsonevent-layout)
+* adds Maven support (by MetaBroadcast)
+
 # Overview
 
 This is a log4j2 layout that produces json that is compliant to logstash v1 spec. JSON produced is a serialization of a given log4j2 LogEvent and is intentionally very similar to that produced by the default log4j2 [JSONLayout](http://logging.apache.org/log4j/2.x/manual/layouts.html). You may use this layout out of the box to connect your java application to a logstash server with maximal speed and minimal redundant processing.
@@ -184,6 +191,8 @@ build/libs/log4j2-logstash-jsonevent-layout-1.0.2-SNAPSHOT.jar
 
 
 ### Maven Publishing
-We're using gradle maven-publish plugin, which is currently incubating and requires a settings.xml
+Currently uses the MetaBroadcast MVN:
+
+mvn clean deploy
 
 
